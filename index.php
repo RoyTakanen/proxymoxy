@@ -43,8 +43,8 @@
 		//Tee curl resurssi
 		$ch = curl_init();
 
-		//Aseta url POST datana vastaanotetuksi
-		curl_setopt($ch, CURLOPT_URL, $_GET["url"]);
+		//Aseta url GET datana vastaanotetuksi ja str_replacella poistetaan lokaalien tiedostojen lukeminen
+		curl_setopt($ch, CURLOPT_URL, str_replace( "file://", "DISABLED://",$_GET["url"]));
 
 		//Palauta siirto stringinä
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
