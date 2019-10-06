@@ -3,9 +3,9 @@ A proxy made with PHP by [kaikkitietokoneista.net](https://kaikkitietokoneista.n
 
 ## Installation
 
-Just copy index.php to your webserver root folder. Keep it simple
+Just copy index.php to your webserver root folder. Keep it simple.
 
 ## To do
 
 1. Translate comments into English.
-2. Penetration test the whole code.
+2. The whole code should be checked for vulnerabilities.
