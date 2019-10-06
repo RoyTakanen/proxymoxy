@@ -1,5 +1,5 @@
 # Proxymoxy
-A proxy made with PHP by [kaikkitietokoneista.net](kaikkitietokoneista.net).
+A proxy made with PHP by [kaikkitietokoneista.net](https://kaikkitietokoneista.net).
 
 ## Installation
 
