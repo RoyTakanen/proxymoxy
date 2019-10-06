@@ -64,10 +64,10 @@
 	} else {
 		?>
 			<form class="lomake" method="POST" action="">
-				<center><input class="hakukenttä" type="text" name="url"><input class="haenappi" type="submit" value="Mene!"></center>
+				<center><input class="hakukenttä" type="text" name="url"><input class="haenappi" type="submit" value="Go!"></center>
 			</form>
 			<object width="100%" style="height: 100%;" data="?proxy=ok&url=<?php echo $_POST["url"]; ?>">
-				Selaimesi ei tue objectia (HTML atribuutti). Vaihda ja selainta!
+				Your browser doesn't support object tags. Change browser!
 			</object>
 
 		<?php
