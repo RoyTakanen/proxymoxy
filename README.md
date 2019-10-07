@@ -12,4 +12,4 @@ Just copy index.php to your webserver root folder. Keep it simple.
 
 ## Settings
 
-This software has small setting. You can disable hosts. Just edit array in line 42.
+This software has small settings. You can disable hosts. Just edit array in line 42.
