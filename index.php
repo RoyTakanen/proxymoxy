@@ -38,16 +38,22 @@
 </head>
 
 <?php
+	//EDITABLE!!!! You can add your owns if you want
+	$disabledhosts = array("localhost", "127.0.0.1", "::1");
+
 	//Tämä tekee tulee objektin sisään, jolloinka proxy kautta mentävä sivu ei ns. vahingoitu
 	if ($_GET["proxy"] === "ok") {
 		//Tee curl resurssi
 		$ch = curl_init();
 
 		//Aseta url GET datana vastaanotetuksi ja str_ireplacella (case insensitive) poistetaan lokaalien tiedostojen lukeminen
-		curl_setopt($ch, CURLOPT_URL, str_ireplace( "file:/", "Kielletty://",$_GET["url"]));
+		curl_setopt($ch, CURLOPT_URL, str_ireplace( $disabledhosts, "ESTETTY",$_GET["url"]));
 
 		//Palauta siirto stringinä
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+		//Estää paikallisten tiedostojen lukemisen
+		curl_setopt($ch, CURLPROTO_FILE, false);
 
 		//Seuraa edelleenohjauksia
 		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
