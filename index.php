@@ -1,5 +1,6 @@
 <head>
 	<meta charset="utf-8" />
+  <link rel="icon" href="https://proxy.kaikkitietokoneista.net/icon.png">
 	<style>
 		body {
 			margin: 0;
@@ -10,21 +11,17 @@
 			border-bottom: 2px solid #31e83d;
 			box-sizing: border-box;
 		}
-
 		.lomake:focus .hakukenttä {
 			width: 50%;
 		}
-
 		.lomake:hover .hakukenttä {
 			width: 50%;
 		}
-
 		.haenappi {
 			background-color: #72c955;
 			padding: 8px;
 			border-radius: 5px;
 		}
-
 		.haenappi:hover {
 			transition-duration: 1s;
 			background-color: #5ad631;
@@ -35,38 +32,30 @@
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
+  <title>Proxymoxy | Kaikkitietokoneista</title>
 </head>
 
 <?php
 	//EDITABLE!!!! You can add your owns if you want
 	$disabledhosts = array("localhost", "127.0.0.1", "::1");
-
 	//Tämä tekee tulee objektin sisään, jolloinka proxy kautta mentävä sivu ei ns. vahingoitu
 	if ($_GET["proxy"] === "ok") {
 		//Tee curl resurssi
 		$ch = curl_init();
-
 		//Aseta url GET datana vastaanotetuksi ja str_ireplacella (case insensitive) poistetaan lokaalien tiedostojen lukeminen
 		curl_setopt($ch, CURLOPT_URL, str_ireplace( $disabledhosts, "ESTETTY",$_GET["url"]));
-
 		//Palauta siirto stringinä
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-
 		//Estää paikallisten tiedostojen lukemisen
 		curl_setopt($ch, CURLPROTO_FILE, false);
-
 		//Seuraa edelleenohjauksia
 		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-
 		//Data sisältää siirron stringin
 		$data = curl_exec($ch);
-
 		//Sulkee curlin
 		curl_close($ch);
-
 		//Näyttää datan ja utf8_decode hyväksyy ääkköset
 		echo $data;
-
 	} else {
 		?>
 			<form class="lomake" method="POST" action="">
