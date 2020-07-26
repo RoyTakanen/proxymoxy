@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/kaikkitietokoneista/proxymoxy/issues"
   },
-  "homepage": "https://github.com/kaikkitietokoneista/proxymoxy#readme"
+  "homepage": "https://github.com/kaikkitietokoneista/proxymoxy#readme",
+  "dependencies": {
+    "valid-url": "^1.0.9"
+  }
 }
