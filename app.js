@@ -1,6 +1,6 @@
 const http = require('http'); //Otetaan http lisäosa käyttöön
 
-const config {
+const config = {
   http_server_port: process.env.HTTP_SERVER_PORT,
   http_proxy_port: process.env.HTTP_PROXY_PORT
 }
