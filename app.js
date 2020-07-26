@@ -22,3 +22,13 @@ http.createServer(function (req, res) { //Luodaan palvelin vastaanottamaan pyynt
     console.log("Pyyntöä suorittaessa tapahtui virhe", err)
   })
 }).listen(config.http_proxy_port) //Asetetaan palvelimen portti
+
+
+let startmessage = `
+Server has started:
+  HTTP PROXY on port: ${config.http_proxy_port}
+  HTTP SERVER on port: ${config.http_server_port}
+`
+
+
+console.log(startmessage);
