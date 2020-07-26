@@ -1,0 +1,26 @@
+{
+  "name": "proxymoxy",
+  "version": "1.0.0",
+  "description": "HTTP proxy made with Node.",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaikkitietokoneista/proxymoxy.git"
+  },
+  "keywords": [
+    "Proxy",
+    "Proxymoxy",
+    "Kaikkitietokoneista",
+    "HTTP",
+    "Proxy"
+  ],
+  "author": "Kaikkitietokoneista",
+  "license": "GPL-2.0-only",
+  "bugs": {
+    "url": "https://github.com/kaikkitietokoneista/proxymoxy/issues"
+  },
+  "homepage": "https://github.com/kaikkitietokoneista/proxymoxy#readme"
+}
