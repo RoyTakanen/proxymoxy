@@ -1,4 +1,8 @@
 <?php
+    header('Access-Control-Allow-Origin: *');
+    header('Access-Control-Allow-Methods: GET');
+    header("Access-Control-Allow-Headers: X-Requested-With");
+
     if (isset($_GET["url"])) {
         $url = $_GET["url"];
         if (filter_var($url, FILTER_VALIDATE_URL)) {
