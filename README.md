@@ -1,15 +1,10 @@
 # Proxymoxy
-A proxy made with PHP by [kaikkitietokoneista.net](https://kaikkitietokoneista.net).
+A dead simple CORS unblock proxy made with PHP.
+
+## In a nutshell
+
+This program takes url and makes a request to the url. It send the URL response back with `Access-Control-Allow-Origin: *` header.
 
 ## Installation
 
 Just copy index.php to your webserver root folder. Keep it simple.
-
-## To do
-
-1. Translate comments into English.
-2. The whole code should be checked for vulnerabilities.
-
-## Settings
-
-This software has small settings. You can disable hosts. Just edit array in line 42.
